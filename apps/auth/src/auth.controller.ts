@@ -17,6 +17,7 @@ export class AuthController {
     @Res({ passthrough: true }) response: Response,
   ) {
     this.logger.log('user', user);
+    this.logger.log('user', user);
     await this.authService.login(user, response);
     response.send(user);
   }
